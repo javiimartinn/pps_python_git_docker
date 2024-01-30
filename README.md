@@ -13,5 +13,5 @@ basta con ejecutar el comando "deactivate".
 -Para resolver las dependencias primero el nuevo usuario tiene acceder a su entorno, y desde ahí hay que ejecutar el comando “pip install -r requirements *” 
 que sirve para importar las dependencias del fichero “requirements” presente en el fichero raíz del proyecto.
 
-# Iniciar entorno y
+# Iniciar entorno y ejecutar la aplicación
 -Para ejecutar la aplicación primero hay que acceder al entorno y después ejecutar el comando “python3 app.py”.
