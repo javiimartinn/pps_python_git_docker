@@ -4,5 +4,4 @@
 # Importaciones
 from bayeta import frotar
 
-print('Hola Mundo!')
-frotar(1)
+print(frotar(5))
