@@ -13,3 +13,9 @@ La aplicacion se llama "Bayeta de la Fortuna", y consiste en un programa cuya fu
 # Ejecución de la aplicación:
 -Para ejecutar la aplicación primero hay que acceder al entorno y después ejecutar el comando “python3 app.py”.
 Para poder visualizarla es necesario acceder al navegador y acceder a la dirección "http://127.0.0.1:5000". Para usar la funcion de la aplicacion que muestra las frases de las galletas, hay que acceder a la direccion "http://127.0.0.1:5000/frotar/4".
+
+# Creación de Imagen Docker:
+-Para poder ejecutar la aplicación en un contenedor de docker primero se necesita una imagen, que se puede crear utilizando el Dockerfile presente en el repositorio. Ejecutando el comando "docker build -t nombre_imagen ." se puede crear la imagen.
+
+# Creación de Contenedor Docker:
+-Para desplegar un contenedor hay que ejecutar el comando "docker run 'nombre_imagen'", y una vez creado para arrancarlo hay que ejecutar el comando "docker start 'nombre_contenedor'", y para acceder al mismo hay que ejecutar el comando "docker exec -it 'container_id_or_name' /bin/bash".
