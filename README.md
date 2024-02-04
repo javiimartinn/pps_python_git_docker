@@ -2,7 +2,11 @@
 Repositorio que contiene la primera tarea del segundo tema de Puesta en Producción Segura.
 
 ## Descripcion de la aplicacion:
-La aplicacion se llama "Bayeta de la Fortuna", y consiste en un programa cuya funcionalidad esta inspirada en las Galletas de la Fortuna, devolviendo mensajes curiosos cuando se ejecute.
+La aplicacion se llama "Bayeta de la Fortuna", y consiste en un programa cuya funcionalidad esta inspirada en las Galletas de la Fortuna, devolviendo mensajes curiosos cuando se ejecute. Además se pueden agregar frases nuevas desde la terminal (con la aplicación desplegada), utilizando el comando curl de la siguiente forma: 
+
+- curl -X POST -H "Content-Type: application/json" -d '{"frases": ["Nueva frase 1", "Nueva frase 2", "Nueva frase 3"]}' http://localhost:5000/frotar/add
+
+Una vez que se haya ejecutado el comando anterior, hay que detener la ejecucion y volver a desplegar la aplicacion, y de esta forma se podrán visualizar las nuevas frases.
 
 Los ficheros principales de la aplicacion son:
 
