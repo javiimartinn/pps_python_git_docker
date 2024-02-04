@@ -1,20 +1,7 @@
-# Ignorar archivos de versionamiento
-.git
-.gitignore
-
-# Ignorar archivos de pruebas
-tests/
-test/
-*.test.*
-
-# Ignorar archivos temporales
-*.tmp
-*.log
-
-# Ignorar archivos de desarrollo
-Dockerfile.dev
-docker-compose.yml
-
-# Ignorar archivos y directorios generados
-node_modules/
-dist/
+*
+!requirements
+!app.py
+!bayeta.py
+!frases.txt
+!prueba_mongo.py
+!README.md

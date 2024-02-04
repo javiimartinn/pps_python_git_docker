@@ -31,3 +31,6 @@ Los ficheros principales de la aplicacion son:
 
 ### Creación de Contenedor Docker:
 -Para desplegar un contenedor hay que ejecutar el comando "docker run 'nombre_imagen'", y una vez creado para arrancarlo hay que ejecutar el comando "docker start 'nombre_contenedor'", y para acceder al mismo hay que ejecutar el comando "docker exec -it 'container_id_or_name' /bin/bash".
+
+## Entorno de Ejecución:
+-Se ha creado un fichero docker-compose.yml, con el cual se pueden tanto crear comom iniciar contenedores de docker. Con el comando "docker compose up -d" se pueden iniciar los contenedores indicados en el fichero .yml (en este caso tanto el contenedor que contiene la aplicacion como el que contiene la base de datos).

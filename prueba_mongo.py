@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 # Dirección IP del servidor mongodb:
-ip_server_mongo = '172.17.0.2'
+ip_server_mongo = '172.0.0.3'
 
 # Conexión con el motor de Mongo
 cliente_mongo = MongoClient('mongodb://' + ip_server_mongo + ':27017/')

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Contenedor con MongoDB
+  mongodb:
+    image: mongo:latest  # Utiliza la última versión de la imagen de MongoDB disponible
+    container_name: mongodb_bayeta  # Nombre del contenedor
+    ports:
+      - "27017:27017"  # Mapea el puerto 27017 del contenedor al puerto 27017 del host
+    networks:
+      red_bayeta:
+        ipv4_address: 172.0.0.3
+
+  # Contenedor con Aplicación
+  python_app:
+    build: .
+    container_name: python_bayeta  # Nombre del contenedor
+    ports:
+      - "5000:5000"  # Mapea el puerto 5000 del contenedor al puerto 5000 del host
+    networks:
+      red_bayeta:
+        ipv4_address: 172.0.0.2
+    depends_on:
+      - mongodb  # Indica que este servicio depende del servicio mongodb
+
+# Red interna para los dos contenedores
+networks:
+  red_bayeta:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.0.0.0/24
