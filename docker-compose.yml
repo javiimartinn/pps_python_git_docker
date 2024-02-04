@@ -10,6 +10,8 @@ services:
     networks:
       red_bayeta:
         ipv4_address: 172.0.0.3
+    volumes:
+      - volumen_mongo:/data/db
 
   # Contenedor con Aplicación
   python_app:
@@ -30,3 +32,6 @@ networks:
       driver: default
       config:
         - subnet: 172.0.0.0/24
+
+volumes:
+  volumen_mongo:
