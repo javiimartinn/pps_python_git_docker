@@ -44,3 +44,14 @@ def consultar(n_frases: int):
 # Cerrar cliente
 def cerrar_sesion():
     cliente_mongo.close()
+
+
+# Funcion que agrega una nueva frase auspiciosa:
+def agregar_frases(nuevas_frases: list):
+    try:
+        frases_auspiciosas = instanciar() #Se crea la conexión
+        frases_auspiciosas.insert_many([{"frase": frase} for frase in nuevas_frases])   #Se agregan las nuevas frases
+        return True
+    except:
+        print("Error en prueba_mongo.py .")
+        return False
