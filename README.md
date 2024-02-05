@@ -38,3 +38,5 @@ Los ficheros principales de la aplicacion son:
 
 ## Entorno de Ejecución:
 -Se ha creado un fichero docker-compose.yml, con el cual se pueden tanto crear comom iniciar contenedores de docker. Con el comando "docker compose up -d" se pueden iniciar los contenedores indicados en el fichero .yml (en este caso tanto el contenedor que contiene la aplicacion como el que contiene la base de datos).
+
+-Otro comando a tener en cuenta es "docker compose up --build", que permite crear de nuevo las imagenes de los contenedores del fichero docker-compose-yml .

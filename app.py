@@ -12,7 +12,7 @@ app = Flask(__name__)
 #Funcion saludar
 @app.route('/')
 def saludar():
-    return '¡Hola, mundo!'
+    return '¡Hola, mundo2!'
 
 
 #Funcion frotar
@@ -49,4 +49,5 @@ def add_frases():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0') # Es necesario declarar el host='0.0.0.0', ya que las aplicaciones Flask lo requieren para
+                            # ser lanzadas desde un contenedor.
